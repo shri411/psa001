@@ -24,6 +24,9 @@ public class CommentController {
             @RequestBody Comment comment,
             @RequestParam  long postId
     ){        //understand here what is happening
+
+        System.out.println(1000); //while understanding git,github
+        System.out.println(1000);
         Post post = postRepository.findById(postId).get();
         comment.setPost(post);
         commentRepository.save(comment);
